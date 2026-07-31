@@ -1,2 +1,13 @@
 __pycache__/
 *.pyc
+
+.venv/
+venv/
+
+game_cache.json
+posted.json
+
+.env
+
+.idea/
+.vscode/
