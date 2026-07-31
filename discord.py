@@ -34,6 +34,10 @@ def send_discord(item):
     "Expired": "🔴",
 }
     embed = {
+        "author": {
+        "name": "Zeros Group - Giveaways",
+        "icon_url": "https://file.garden/afbSsuts32dZ5wSl/El-Gato-Cat-Adorable-Cartoon-Cat-PNG-thumb.png"
+    },
     "title": f"🎁 {item['title']}",
     "url": "https://zeros.group/free/",
     "color": colors[item["status"]],
