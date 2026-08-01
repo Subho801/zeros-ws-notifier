@@ -40,7 +40,7 @@ Instead of automating a browser with Playwright, it communicates directly with t
 ### Discord Notification
 
 <p align="center">
-  <img src="images/embed.png" width="420">
+  <img src="images/embed1.png" width="420">
 </p>
 
 ---
