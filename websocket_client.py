@@ -117,7 +117,7 @@ def fetch_current_giveaway():
             .replace("✖", " × "),
         "deadline": current["deadline"],
         "start_time": current["start_time"],
-        "image": current.get("image") or None,
+        "image": "http://zeros.group/free/random.jpg",
         "stock": stock,
         "claimed": current.get("claim_count", 0),
         "status": status,
