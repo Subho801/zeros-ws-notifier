@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="images/banner.png" alt="Zeros WS Notifier Banner">
-</p>
-
 <h1 align="center">🎁 Zeros WS Notifier</h1>
 
 <p align="center">
