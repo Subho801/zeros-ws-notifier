@@ -1,40 +1,66 @@
+<p align="center">
+  <img src="images/banner.png" alt="Zeros WS Notifier Banner">
+</p>
+
+<h1 align="center">🎁 Zeros WS Notifier</h1>
+
+<p align="center">
+  Lightweight Discord notifier for <strong>Zeros Group</strong> Steam key giveaways using the site's WebSocket API.
+</p>
+
+<p align="center">
+
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/Subho801/zeros-ws-notifier/notifier.yml?label=Workflow)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![GitHub Actions](https://img.shields.io/github/actions/workflow/status/Subho801/zeros-ws-notifier/notifier.yml)
 
-# 🎁 Zeros WS Notifier
+</p>
 
-A lightweight Discord notifier for **Zeros Group** Steam key giveaways.
+---
 
-Unlike browser automation, this project connects directly to the site's WebSocket endpoint, making it extremely fast and lightweight.
+## 📖 About
+
+This project monitors the Zeros Group giveaway platform and automatically sends Discord notifications whenever a Steam key giveaway is announced, goes live, or expires.
+
+Instead of automating a browser with Playwright, it communicates directly with the site's WebSocket endpoint, making it significantly faster and more lightweight.
 
 ---
 
 ## ✨ Features
 
-- ⚡ Direct WebSocket connection
-- 🎮 Automatic Steam game name lookup via IGDB
-- 🔔 Discord webhook notifications
-- 🟡 Upcoming / 🟢 Live / 🔴 Expired detection
-- 🏆 Featured rewards list
-- 💾 Persistent state (no duplicate notifications)
-- 🤖 Runs automatically with GitHub Actions every 5 minutes
+- ⚡ Direct WebSocket communication
+- 🎮 Official Steam game names via IGDB
+- 🟡 Upcoming / 🟢 Live / 🔴 Expired notifications
+- 🏆 Featured rewards
+- 🔔 Discord webhook support
+- 💾 Persistent state to prevent duplicate posts
+- 🤖 Automatic GitHub Actions deployment
+- 🚀 No browser automation required
 
 ---
 
-## Preview
+# 📷 Preview
 
-*(Discord embed screenshot here)*
+### Discord Notification
 
----
-
-## Example Notification
-
-![Example](images/embed.png)
+<p align="center">
+  <img src="images/embed.png" width="420">
+</p>
 
 ---
 
-## Installation
+# ⚙️ Requirements
+
+| Requirement | Version |
+|------------|---------|
+| Python | 3.12+ |
+| Discord Webhook | Required |
+| Twitch Developer App | Required |
+| IGDB API | Required |
+
+---
+
+# 🚀 Installation
 
 ```bash
 git clone https://github.com/Subho801/zeros-ws-notifier.git
@@ -46,19 +72,19 @@ pip install -r requirements.txt
 
 ---
 
-## Configuration
+# 🔐 Configuration
 
-Create GitHub Secrets or environment variables.
+Create the following environment variables or GitHub Secrets.
 
-```
-DISCORD_WEBHOOK_URL=
-TWITCH_CLIENT_ID=
-TWITCH_CLIENT_SECRET=
-```
+| Variable | Required |
+|----------|----------|
+| DISCORD_WEBHOOK_URL | ✅ |
+| TWITCH_CLIENT_ID | ✅ |
+| TWITCH_CLIENT_SECRET | ✅ |
 
 ---
 
-## Run
+# ▶️ Run
 
 ```bash
 python main.py
@@ -66,42 +92,38 @@ python main.py
 
 ---
 
-## How it works
+# 🧠 How it Works
 
 ```
-Zeros WebSocket
-        │
-        ▼
-WebSocket Client
-        │
-        ▼
-IGDB Lookup
-        │
-        ▼
-Discord Embed
+Zeros Group
+     │
+     ▼
+ WebSocket
+     │
+     ▼
+ Giveaway Parser
+     │
+     ▼
+ IGDB Game Lookup
+     │
+     ▼
+ Discord Webhook
 ```
 
 ---
 
-## Tech Stack
-
-- Python
-- websocket-client
-- Requests
-- GitHub Actions
-- IGDB API
-
----
-
-## Project Structure
+# 📂 Project Structure
 
 ```
 .
+├── .github/
+│   └── workflows/
 ├── discord.py
+├── websocket_client.py
 ├── game_lookup.py
 ├── igdb.py
-├── websocket_client.py
 ├── main.py
+├── state.py
 ├── posted.json
 ├── game_cache.json
 └── requirements.txt
@@ -109,6 +131,22 @@ Discord Embed
 
 ---
 
-## License
+# 🤝 Contributing
 
-MIT
+Pull requests are welcome.
+
+For major changes, please open an issue first to discuss what you'd like to improve.
+
+---
+
+# ⚠️ Disclaimer
+
+This project is **not affiliated with or endorsed by Zeros Group**.
+
+It is an unofficial community notifier created for educational and automation purposes.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
