@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/Subho801/zeros-ws-notifier/notifier.yml)
+
 # 🎁 Zeros WS Notifier
 
 A lightweight Discord notifier for **Zeros Group** Steam key giveaways.
