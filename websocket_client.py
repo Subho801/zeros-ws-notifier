@@ -107,7 +107,9 @@ def fetch_current_giveaway():
     else:
         # Safety fallback
         status = "Upcoming"
-
+        
+    print(json.dumps(current, indent=2, ensure_ascii=False))
+    
     return {
         "id": current["period_id"],
         "title": "Random Steam Key Giveaway",
