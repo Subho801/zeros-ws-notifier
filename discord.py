@@ -49,7 +49,7 @@ def send_discord(item):
         },
         {
             "name": "Keys",
-            "value": f"🔑 {item['stock']} / {item['claimed']}",
+            "value": f"🔑 {item['stock']} / {item['total']}",
             "inline": True,
         },
         {
