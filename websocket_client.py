@@ -97,6 +97,8 @@ def fetch_current_giveaway():
     )
 
     stock = current.get("stock_count", 0)
+    claimed = current.get("claim_count", 0)
+    total = stock + claimed
 
     if current["is_expired"]:
         status = "Expired"
@@ -121,7 +123,8 @@ def fetch_current_giveaway():
         "start_time": current["start_time"],
         "image": "http://zeros.group/free/random.jpg",
         "stock": stock,
-        "claimed": current.get("claim_count", 0),
+        "claimed": claimed,
+        "total": total,
         "status": status,
         "games": current.get("games", []),
         "featured_rewards": format_rewards(
